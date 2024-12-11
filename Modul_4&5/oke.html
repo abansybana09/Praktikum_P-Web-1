@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postes No 1 M4/M5 P WEB 1</title>
+    <script>
+        function calculateSalary() {
+            const golongan = document.getElementById("golongan").value;
+            const jumlahAnak = parseInt(document.getElementById("anak").value) || 0;
+
+            let gajiPokok;
+            let persenTunjangan;
+
+            if (golongan === "I") {
+                gajiPokok = 250000;
+                persenTunjangan = 5; 
+            } else if (golongan === "II") {
+                gajiPokok = 300000;
+                persenTunjangan = 10; 
+            } else if (golongan === "III") {
+                gajiPokok = 350000;
+                persenTunjangan = 15;
+            }
+
+            const tunjangan = jumlahAnak * gajiPokok * (persenTunjangan / 100);
+            const gajiBersih = gajiPokok + tunjangan;
+
+            document.getElementById("gajiPokokOutput").textContent = gajiPokok;
+            document.getElementById("persenTunjanganOutput").textContent = persenTunjangan + "%";
+            document.getElementById("tunjanganOutput").textContent = tunjangan;
+            document.getElementById("gajiBersihOutput").textContent = gajiBersih;
+        }
+    </script>
+</head>
+<body>
+    <h2>PERHITUNGAN GAJI</h2>
+    <form name="form1">
+        <label for="golongan">Golongan:</label>
+        <select id="golongan" name="gapok">
+            <option value="I">I</option>
+            <option value="II">II</option>
+            <option value="III">III</option>
+        </select><br><br>
+
+        <label for="anak">Jumlah Anak:</label>
+        <input type="text" id="anak" name="anak" size="10" maxlength="10"><br><br>
+
+        <button type="button" name="hitung" onclick="calculateSalary()">Hitung</button>
+        <button type="reset" name="batal">Cancel</button>
+    </form>
+
+    <h3>Hasil Perhitungan:</h3>
+    <p>Gaji Pokok: <span id="gajiPokokOutput"></span></p>
+    <p>Persen Tunjangan: <span id="persenTunjanganOutput"></span></p>
+    <p>Tunjangan: <span id="tunjanganOutput"></span></p>
+    <p>Gaji Bersih: <span id="gajiBersihOutput"></span></p>
+</body>
+</html>
+    

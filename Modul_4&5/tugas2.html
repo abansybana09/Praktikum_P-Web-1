@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Ke2 P web 1</title>
+    <link rel="stylesheet" href="tugas2.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="wrapper">
+        <h2>Tambah Data Kamar</h2>
+        <form id="formTambahKamar">
+            <label for="id-kamar">ID Kamar:</label>
+            <input type="number" id="id-kamar" name="id-kamar" class="input-number" required /><br><br>
+
+            <label for="gambar-ruangan">Gambar Ruangan:</label>
+            <input type="file" id="gambar-ruangan" name="gambar-ruangan" class="input-file" accept="image/*"><br><br>
+
+            <label for="jenis-kamar">Jenis Kamar:</label>
+            <select id="tipe-kamar" name="tipe-kamar" class="select-input">
+                <option value="">--Pilih Salah Satu--</option>
+                <option value="standard">STANDARD</option>
+                <option value="deluxe">DELUXE</option>
+                <option value="family">FAMILY</option>
+            </select><br><br>
+
+            <label for="harga">Harga:</label>
+            <select id="harga" name="harga" class="select-harga">
+                <option value="">--Pilih Salah Satu--</option>
+                <option value="standard">150000</option>
+                <option value="deluxe">250000</option>
+                <option value="family">350000</option>
+            </select><br><br>
+
+            <label for="fasilitas-kamar">Fasilitas:</label>
+            <select id="fasilitas-kamar" name="fasilitas-kamar" class="select-fasilitas">
+                <option value="">--Pilih Salah Satu--</option>
+                <option value="standard">Kolam Renang</option>
+                <option value="deluxe">Tempat GYM</option>
+                <option value="family">AC</option>
+            </select><br><br>
+
+            <button type="submit" class="btn-submit">Simpan</button>
+            <button type="reset" class="btn-reset">Batal</button>
+        </form>
+    </div>
+
+    <div class="wrapper">
+        <h2>Tambah Fasilitas</h2>
+        <form id="formTambahFasilitas">
+            <label for="id-fasilitas">ID:</label>
+            <input type="text" id="id-fasilitas" name="id-fasilitas" class="input-text"><br><br>
+
+            <label for="nama-fasilitas">Nama: </label>
+            <input type="text" id="nama-fasilitas" name="nama-fasilitas" class="input-text" required /><br><br>
+
+            <label for="jenis-fasilitas">Fasilitas:</label>
+            <select id="jenis-fasilitas" name="jenis-fasilitas" class="select-input">
+                <option value="">--Pilih Salah Satu--</option>
+                <option value="standard">Bar</option>
+                <option value="deluxe">Wifi</option>
+                <option value="family">Tempat Tidur Double</option>
+            </select><br><br>
+
+            <label for="harga-weekend">Harga Weekend:</label>
+            <select id="harga-weekend" name="harga-weekend" class="select-harga">
+                <option value="">--Pilih Salah Satu--</option>
+                <option value="reguler">100000</option>
+                <option value="standard">150000</option>
+                <option value="premium">200000</option>
+            </select><br><br>
+
+            <label for="harga-weekday">Harga Weekday:</label>
+            <select id="harga-weekday" name="harga-weekday" class="select-harga">
+                <option value="">--Pilih Salah Satu--</option>
+                <option value="reguler">75000</option>
+                <option value="standard">100000</option>
+                <option value="premium">120000</option>
+            </select><br><br>
+
+            <label for="kuota">Kuota:</label>
+            <input type="number" id="kuota" name="kuota" class="input-number"><br><br>
+
+            <label for="jam-buka">Jam Buka:</label>
+            <input type="time" id="jam-buka" name="jam-buka" class="input-time"><br><br>
+
+            <label for="jam-tutup">Jam Tutup:</label>
+            <input type="time" id="jam-tutup" name="jam-tutup" class="input-time"><br><br>
+
+            <button type="submit" class="btn-submit">Simpan</button>
+            <button type="reset" class="btn-reset">Batal</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function validasiformdataKamar(event) {
+        event.preventDefault();
+        let idKamar = document.getElementById("id-kamar").value;
+        let gambarRuangan = document.getElementById("gambar-ruangan").value;
+        let tipeKamar = document.getElementById("tipe-kamar").value;
+        let harga = document.getElementById("harga").value;
+        let fasilitasKamar = document.getElementById("fasilitas-kamar").value;
+
+        if (idKamar === "") { alert("ID Kamar harus diisi!"); return; }
+        if (gambarRuangan === "") { alert("Gambar Ruangan harus diunggah!"); return; }
+        if (tipeKamar === "") { alert("Pilih Jenis Kamar!"); return; }
+        if (harga === "") { alert("Pilih Harga Kamar!"); return; }
+        if (fasilitasKamar === "") { alert("Pilih Fasilitas Kamar!"); return; }
+
+        alert("Data Kamar berhasil disimpan!");
+    }
+
+    function validasiformdataFasilitas(event) {
+        event.preventDefault();
+        let idFasilitas = document.getElementById("id-fasilitas").value;
+        let namaFasilitas = document.getElementById("nama-fasilitas").value;
+        let jenisFasilitas = document.getElementById("jenis-fasilitas").value;
+        let hargaWeekend = document.getElementById("harga-weekend").value;
+        let hargaWeekday = document.getElementById("harga-weekday").value;
+        let kuota = document.getElementById("kuota").value;
+        let jamBuka = document.getElementById("jam-buka").value;
+        let jamTutup = document.getElementById("jam-tutup").value;
+
+        if (idFasilitas === "") { alert("ID Fasilitas harus diisi!"); return; }
+        if (namaFasilitas === "") { alert("Nama Fasilitas harus diisi!"); return; }
+        if (jenisFasilitas === "") { alert("Pilih Jenis Fasilitas!"); return; }
+        if (hargaWeekend === "") { alert("Pilih Harga Weekend!"); return; }
+        if (hargaWeekday === "") { alert("Pilih Harga Weekday!"); return; }
+        if (kuota === "") { alert("Kuota harus diisi!"); return; }
+        if (jamBuka === "") { alert("Jam Buka harus diisi!"); return; }
+        if (jamTutup === "") { alert("Jam Tutup harus diisi!"); return; }
+
+        alert("Data Fasilitas berhasil disimpan!");
+    }
+
+    document.getElementById("formTambahKamar").onsubmit = validasiformdataKamar;
+    document.getElementById("formTambahFasilitas").onsubmit = validasiformdataFasilitas;
+</script>
+
+</body>
+</html>
