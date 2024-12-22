@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Petualangan</title>
+    <script src="/js/jquery-3.7.1.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        
+        body {
+            background-color: #2d2f30db;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu>.dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: -6px;
+            margin-left: 0;
+        }
+
+        .dropdown-submenu:hover>.dropdown-menu {
+            display: block;
+        }
+
+        header .img {
+            width: 70%; 
+            height: auto; 
+           
+            max-height: 150px; 
+            object-fit: cover; 
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            background-color: #121212b6;
+            color: white;
+            padding: 10px 20px; 
+            height: 150px; 
+            position: relative; 
+        }
+
+        header .logo {
+            width: 10%;
+            margin-right: 15px; 
+        }
+
+        header .title {
+            font-size: 1.8rem; 
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-right: 50px;
+        }
+
+        .navbar-nav .dropdown-menu .dropdown-item { 
+            color: white; 
+        }
+
+        .dropdown-menu {
+            background-color: #495057;
+        }
+
+        .dropdown-menu .dropdown-item:hover {
+            background-color: #6c757d;
+        }
+
+        .card-img {
+            justify-content: center;
+            display: flex;
+            gap: 20px;
+        }
+        .card-img-top {
+            border-radius: 10px;
+        }
+
+        .card-text {
+            text-align: justify; /* Untuk teks yang rapi */ 
+            text-indent: 40px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <img src="/img/logo.png" alt="Logo" class="logo">
+        <span class="title">BEST HOTEL</span>
+        <img src="/img/hotel.jpg" class="img" alt="Header Image" >
+    </header>
+
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary text-white">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/Modul_9&10/project.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/Modul_9&10/kamar/index.html">Kamar</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Fasilitas
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item " href="/Modul_9&10/Fasilitas/petualangan/index.html">Petualangan Alam</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Kolam Renang</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/Modul_9&10/Fasilitas/kolam/air/index.html">Sumber Air Panas</a></li>
+                                        <li class="dropdown-submenu">
+                                            <a class="dropdown-item dropdown-toggle" href="/Modul_9&10/Fasilitas/kolam/anak&dewasa/index.html">Kolam Anak & Dewasa</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="/Modul_9&10/Fasilitas/kolam/anak&dewasa/reguler/index.html">Reguler</a></li>
+                                                <li><a class="dropdown-item" href="/Modul_9&10/Fasilitas/kolam/anak&dewasa/premium/index.html">Premium</a></li>
+                                            </ul>
+                                        </li>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="/Modul_9&10/Fasilitas/kebugaran/index.html">Pusat Kebugaran</a></li>
+                            <li><a class="dropdown-item" href="/Modul_9&10/Fasilitas/rapat/index.html">Ruang Rapat</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/Modul_9&10/pesan/tugas.html">Pesan Sekarang</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="card mb-3 m-4">
+        <div class="card-img mt-4">
+        <img src="/Modul_9&10/img/pemandangan.png" class="card-img-top" alt="..." style="width: 25%;">
+        <img src="/Modul_9&10/img/pemandangan 2.jpeg" class="card-img-top" alt="..." style="width: 25%;">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-center">Selamat Datang di Petualangan Alam Hotel</h5>
+          <p class="card-text">Petualangan Alam Hotel menghadirkan pengalaman liburan yang tak terlupakan di tengah keindahan alam. Dikelilingi pemandangan hijau yang menenangkan, hotel ini menjadi tempat sempurna untuk melarikan diri dari hiruk-pikuk kota dan menikmati suasana yang damai. Dengan konsep ramah lingkungan, kami menawarkan penginapan yang nyaman dan harmonis dengan alam sekitar. Kami menyediakan berbagai jenis akomodasi, mulai dari kamar dengan pemandangan menakjubkan, villa eksklusif di tepi sungai, hingga tenda glamping mewah untuk Anda yang menyukai nuansa petualangan. Setiap pilihan dilengkapi fasilitas modern, termasuk balkon pribadi untuk menikmati keindahan alam secara maksimal.Di Petualangan Alam Hotel, Anda dapat mengeksplorasi berbagai aktivitas menarik, seperti hiking, bersepeda, atau menikmati relaksasi melalui yoga dan spa di tengah suasana alam yang tenang. Tak lupa, restoran kami menyajikan hidangan lezat berbahan dasar lokal yang segar, diracik untuk memanjakan lidah Anda.</p>
+
+          <p class="card-text">Nikmati pengalaman liburan yang berbeda bersama kami di Petualangan Alam Hotel. Di sini, Anda akan merasakan kombinasi sempurna antara petualangan seru di tengah alam yang memukau dan kenyamanan akomodasi berkelas yang dirancang khusus untuk memanjakan setiap momen istirahat Anda. Jadikan waktu berharga Anda lebih bermakna dengan kenangan indah yang tak terlupakan bersama kami!</p>
+        </div>
+      </div>
+
+        <!-- Footer Section -->
+    <footer class="container-fluid bg-secondary py-3">
+        <p style="text-align: center; color: white;"> &copy; 2024 Bana Best Hotel</p>
+     
+    </footer>
+ 
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ </body>
+ 
+ </html>

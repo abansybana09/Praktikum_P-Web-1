@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            background-color: #2d2f30db;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header .img {
+            width: 70%; 
+            height: auto; 
+            max-height: 150px; 
+            object-fit: cover; 
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            background-color: #121212b6;
+            color: white;
+            padding: 10px 20px; 
+            height: 150px; 
+            position: relative; 
+        }
+
+        .kembali {
+            background-color: #ffffff;
+            text-decoration: none;
+            padding: 13px 20px;
+            margin-top: 8%;
+            border-radius: 4px;
+            color: #161414;
+            width: 6.2%;
+            margin-left: 15px;
+        }
+
+        .kembali:hover {
+            background-color: #8d8e8fd7; 
+            color: #fff; 
+            border: 1px solid #8d8e8fd7; 
+        }
+
+
+        header .logo {
+            width: 10%;
+            margin-right: 15px; 
+        }
+
+        header .title {
+            font-size: 1.8rem; 
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-right: 50px;
+        }
+
+        .table-container {
+            max-width: 90%;
+            margin: 20px auto;
+            flex: 1;
+        }
+
+        footer {
+            background-color: #121212b6;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="/Modul_9&10/img/logo.png" alt="Logo" class="logo">
+            <span class="title">BEST HOTEL</span>
+            <img src="/Modul_9&10/img/hotel.jpg" class="img" alt="Header Image">
+        </header>
+
+        <div class="table-container mt-5">
+            <h2 class="text-center mb-4 text-light">Daftar Pemesanan Konsumen</h2>
+            <table class="table table-bordered table-striped text-center align-middle">
+              <thead class="table-primary">
+                <tr>
+                  <th>Nama Pemesan</th>
+                  <th>No Identitas</th>
+                  <th>Jenis Kelamin</th>
+                  <th>Tipe Kamar</th>
+                  <th>Durasi Menginap</th>
+                  <th>Termasuk Breakfast</th>
+                  <th>Total Bayar</th>
+                </tr>
+              </thead>
+              <tbody class="table-light">
+                <tr>
+                    <td>Jarwo</td>
+                    <td>192768</td>
+                    <td>Laki-Laki</td>
+                    <td>Deluxe Room</td>
+                    <td>2 Hari</td>
+                    <td>Ya</td>
+                    <td>Rp. 2.620.000</td>
+                  </tr>
+                <tr>
+                    <td>Sulaiman</td>
+                    <td>124905</td>
+                    <td>Laki-Laki</td>
+                    <td>Superior Room</td>
+                    <td>1 Hari</td>
+                    <td>Tidak</td>
+                    <td>Rp. 1.000.000</td>
+                  </tr>
+                <tr>
+                    <td>Siti</td>
+                    <td>435612</td>
+                    <td>Perempuan</td>
+                    <td>Family Room</td>
+                    <td>3 Hari</td>
+                    <td>Ya</td>
+                    <td>Rp. 6.150.000</td>
+                  </tr>
+                <tr>
+                  <td>Ahmad</td>
+                  <td>267120</td>
+                  <td>Laki-Laki</td>
+                  <td>Suite Room</td>
+                  <td>1 Hari</td>
+                  <td>Tidak</td>
+                  <td>Rp. 3.000.000</td>
+                </tr>
+                <tr>
+                    <td>Soleh</td>
+                    <td>489212</td>
+                    <td>Laki-Laki</td>
+                    <td>Presidential Room</td>
+                    <td>2 Hari</td>
+                    <td>Tidak</td>
+                    <td>Rp. 10.000.000</td>
+                  </tr>
+                  <tr>
+                    <td>Wati</td>
+                    <td>872356</td>
+                    <td>Perempuan</td>
+                    <td>Standar Room</td>
+                    <td>3 Hari</td>
+                    <td>Ya</td>
+                    <td>Rp. 1.650.000</td>
+                  </tr>
+              </tbody>
+            </table>
+        </div>
+
+        <a href="well.html" class="kembali">Kembali</a>
+
+        <footer class="container-fluid bg-secondary py-3 mt-4">
+            <p style="text-align: center; color: white;"> &copy; 2024 Bana Best Hotel</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

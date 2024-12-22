@@ -1,0 +1,124 @@
+
+h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    width: 80%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 150px;
+    margin-top: 30px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+form label {
+    font-weight: bold;
+    color: #333;
+    width: 150px;
+}
+
+.text-input,
+.number-input,
+.date-input,
+.select-input{
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.checkbox-input {
+    margin-left: 10px;
+}
+
+.small-input {
+  
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #666;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form button.reset-button {
+    background-color: #999;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+form button.reset-button:hover {
+    background-color: #777;
+}
+
+/* CSS Tambahan */
+.result-container {
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin-left: 40%;
+}
+
+.result-container h2 {
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.result-table th, .result-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.result-table th {
+    background-color: #f3f3f3;
+    color: #333;
+    font-weight: bold;
+}
+
+.result-table td {
+    color: #555;
+}
+
+.result-table tr:last-child td {
+    border-bottom: none;
+}

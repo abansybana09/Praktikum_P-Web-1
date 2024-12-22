@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Jenis Kamar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            background-color: #2d2f30db;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+
+        .wrapper {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            color: #fff;
+        }
+
+        form {
+            background-color: #fff;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .text-input,
+        .input-number,
+        .input-file,
+        .select-input,
+        .select-harga,
+        .select-fasilitas {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .input-file {
+            padding: 3px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn-submit {
+            background-color: rgb(91, 255, 20);
+            color: white;
+        }
+
+        .btn-reset {
+            background-color: rgb(60, 136, 251);
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .kembali {
+            background-color: rgb(244, 7, 157);
+            text-decoration: none;
+            padding: 13px 20px;
+            margin-top: 10px;
+            border-radius: 4px;
+            color: #fff;
+        }
+
+        .kembali:hover {
+            opacity: 0.8;
+        }
+
+        .gambar {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header .img {
+            width: 70%; 
+            height: auto; 
+            max-height: 150px; 
+            object-fit: cover; 
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            background-color: #121212b6;
+            color: white;
+            padding: 10px 20px; 
+            height: 150px; 
+            position: relative; 
+        }
+
+        header .logo {
+            width: 10%;
+            margin-right: 15px; 
+        }
+
+        header .title {
+            font-size: 1.8rem; 
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-right: 50px;
+        }
+
+        footer {
+            background-color: #121212b6;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="gambar">
+        <header>
+            <img src="/Modul_9&10/img/logo.png" alt="Logo" class="logo">
+            <span class="title">BEST HOTEL</span>
+            <img src="/Modul_9&10/img/hotel.jpg" class="img" alt="Header Image" >
+        </header>
+
+    <div class="container">
+        <div class="wrapper">
+            <h2>Tambah Data Kamar</h2>
+            <form id="formTambahKamar">
+                <label for="jumlah-pemesanan">ID :</label>
+                <input type="text" id="jumlah-pemesanan" name="jumlah-pemesanan" class="text-input"><br><br>
+
+                <label for="gambar-ruangan">Gambar Ruangan :</label>
+                <input type="file" id="gambar-ruangan" name="gambar-ruangan" class="input-file" accept="image/*"><br><br>
+
+                <label for="jenis-kamar">Jenis Kamar :</label>
+                <select id="tipe-kamar" name="tipe-kamar" class="select-input" onchange="updateHargaDanFasilitas()">
+                    <option value="">-- Pilih Salah Satu --</option>
+                    <option value="STD">STANDARD</option>
+                    <option value="DLX">DELUXE</option>
+                    <option value="FMY">FAMILY</option>
+                    <option value="SPR">SUPERIOR</option>
+                    <option value="STE">SUITE</option>
+                    <option value="PSDT">PRESIDENTIAL</option>
+                </select><br><br>
+
+                <label for="harga">Harga :</label>
+                <input type="text" id="harga" name="harga" class="text-input" readonly><br><br>
+
+                <label for="fasilitas-kamar">Fasilitas :</label>
+                <input type="text" id="fasilitas-kamar" name="fasilitas-kamar" class="text-input" readonly><br><br>
+
+                <button type="submit" class="btn-submit">Simpan</button>
+                <button type="reset" class="btn-reset">Batal</button>
+                <a href="well.html" class="kembali text-light">Kembali</a>  
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function updateHargaDanFasilitas() {
+            const tipeKamar = document.getElementById("tipe-kamar").value;
+            const hargaField = document.getElementById("harga");
+            const fasilitasField = document.getElementById("fasilitas-kamar");
+
+            const dataKamar = {
+                "STD": { harga: "30000", fasilitas: "Kolam Renang" },
+                "DLX": { harga: "50000", fasilitas: "Pusat Kebugaran" },
+                "FMY": { harga: "100000", fasilitas: "Ruang Rapat" },
+                "SPR": { harga: "70000", fasilitas: "Spa" },
+                "STE": { harga: "150000", fasilitas: "Restoran" },
+                "PSDT": { harga: "200000", fasilitas: "Layanan Concierge" }
+            };
+
+            if (dataKamar[tipeKamar]) {
+                hargaField.value = dataKamar[tipeKamar].harga;
+                fasilitasField.value = dataKamar[tipeKamar].fasilitas;
+            } else {
+                hargaField.value = "";
+                fasilitasField.value = "";
+            }
+        }
+        
+        function validasiformdataKamar(event) {
+            event.preventDefault();
+            let idPemesanan = document.getElementById("jumlah-pemesanan").value;
+            let gambarRuangan = document.getElementById("gambar-ruangan").value;
+            let tipeKamar = document.getElementById("tipe-kamar").value;
+            let harga = document.getElementById("harga").value;
+            let fasilitasKamar = document.getElementById("fasilitas-kamar").value;
+
+            if (idPemesanan === "") { alert("ID Kamar harus diisi!"); return; }
+            if (gambarRuangan === "") { alert("Gambar Ruangan harus diunggah!"); return; }
+            if (tipeKamar === "") { alert("Pilih Jenis Kamar!"); return; }
+            if (harga === "") { alert("Pilih Harga Kamar!"); return; }
+            if (fasilitasKamar === "") { alert("Pilih Fasilitas Kamar!"); return; }
+
+            if (idPemesanan.length < 6) {
+                alert("ID Pemesanan harus minimal 6 digit!");
+                return;
+            }
+            alert("Data Kamar berhasil disimpan!");
+            
+        }
+
+        document.getElementById("formTambahKamar").onsubmit = validasiformdataKamar;
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <footer class="container-fluid bg-secondary py-3 mt-4">
+        <p style="text-align: center; color: white;"> &copy; 2024 Bana Best Hotel</p>
+    </footer>
+
+</body>
+</html>

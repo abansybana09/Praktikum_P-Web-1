@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Kamar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        
+        body {
+            background-color: #2d2f30db;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu>.dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: -6px;
+            margin-left: 0;
+        }
+
+        .dropdown-submenu:hover>.dropdown-menu {
+            display: block;
+        }
+
+        header .img {
+            width: 70%; 
+            height: auto; 
+           
+            max-height: 150px; 
+            object-fit: cover; 
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            background-color: #121212b6;
+            color: white;
+            padding: 10px 20px; 
+            height: 150px; 
+            position: relative; 
+        }
+
+        header .logo {
+            width: 10%;
+            margin-right: 15px; 
+        }
+
+        header .title {
+            font-size: 1.8rem; 
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-right: 50px;
+        }
+
+        .navbar-nav .dropdown-menu .dropdown-item { 
+            color: white; 
+        }
+
+        .dropdown-menu {
+            background-color: #495057;
+        }
+
+        .dropdown-menu .dropdown-item:hover {
+            background-color: #6c757d;
+        }
+   
+        table img {
+            width: 100px; 
+            height: auto;
+            display: block;
+            margin: auto; 
+            border-radius: 5px;
+        }
+
+        .table-container {
+            max-width: 90%;
+            margin: 20px auto; 
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <img src="/img/logo.png" alt="Logo" class="logo">
+        <span class="title">BEST HOTEL</span>
+        <img src="/img/hotel.jpg" class="img" alt="Header Image" >
+    </header>
+
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary text-white">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/Modul_9&10/project.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/Modul_9&10/kamar/index.html">Kamar</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Fasilitas
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item " href="/Modul_9&10/Fasilitas/petualangan/index.html">Petualangan Alam</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Kolam Renang</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/Modul_9&10/Fasilitas/kolam/air/index.html">Sumber Air Panas</a></li>
+                                        <li class="dropdown-submenu">
+                                            <a class="dropdown-item dropdown-toggle" href="/Modul_9&10/Fasilitas/kolam/anak&dewasa/index.html">Kolam Anak & Dewasa</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="/Modul_9&10/Fasilitas/kolam/anak&dewasa/reguler/index.html">Reguler</a></li>
+                                                <li><a class="dropdown-item" href="/Modul_9&10/Fasilitas/kolam/anak&dewasa/premium/index.html">Premium</a></li>
+                                            </ul>
+                                        </li>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="/Modul_9&10/Fasilitas/kebugaran/index.html">Pusat Kebugaran</a></li>
+                            <li><a class="dropdown-item" href="/Modul_9&10/Fasilitas/rapat/index.html">Ruang Rapat</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/Modul_9&10/pesan/tugas.html">Pesan Sekarang</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="table-container ">
+        <h2 class="text-center mb-4 text-light">Daftar Kamar Hotel</h2>
+        <table class="table table-bordered table-striped text-center align-middle">
+          <thead class="table-primary">
+            <tr>
+              <th>Id</th>
+              <th>Gambar Kamar</th>
+              <th>Jenis Kamar</th>
+              <th>Harga</th>
+              <th>Fasilitas</th>
+            </tr>
+          </thead>
+          <tbody class="table-light">
+            <tr>
+              <td>1</td>
+              <td><img src="/img/kamar 1.jpg" alt="Kamar 1"></td>
+              <td>Standar Room</td>
+              <td>500.000 per malam</td>
+              <td class="text-start">Tempat Tidur, Kamar Mandi, Wi-Fi gratis, AC.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><img src="/img/kamar 2.jpg" alt="Kamar 2"></td>
+              <td>Deluxe Room</td>
+              <td>700.000 per malam</td>
+              <td class="text-start">Tempat Tidur, Kamar Mandi, Wi-Fi gratis, AC, Meja Kerja.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><img src="/img/kamar 6.jpeg" alt="Kamar 6"></td>
+                <td>Superior Room</td>
+                <td>1.000.000 per malam</td>
+                <td class="text-start">Tempat Tidur, Kamar Mandi, Wi-Fi gratis, AC, TV, Meja Kerja, Minibar.</td>
+              </tr>
+            <tr>
+              <td>4</td>
+              <td><img src="/img/kamar 3.jpg" alt="Kamar 3"></td>
+              <td>Family Room</td>
+              <td>2.000.000 per malam</td>
+              <td class="text-start">Tempat Tidur dengan ukuran besar, Kamar Mandi, Wi-Fi gratis, AC, Minibar, TV, Area Bermain Anak.</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td><img src="/img/kamar 4.jpg" alt="Kamar 4"></td>
+              <td>Suite Room</td>
+              <td>3.000.000 per malam</td>
+              <td class="text-start">Dua Tempat Tidur, Kamar Mandi, Wi-Fi gratis, AC, TV, Meja Kerja, Minibar dan pantry, Layanan Laudy Gratis.</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td><img src="/img/kamar 5.jpg" alt="Kamar 5"></td>
+              <td>Presidential Suite</td>
+              <td>5.000.000 per malam</td>
+              <td class="text-start">Tempat Tidur dengan ukuran besar, Kamar Mandi, Wi-Fi gratis, AC, TV, Meja Kerja, Minibar dan pantry, Layanan Laudy Gratis, Layanan butler pribadi.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    <!-- Footer Section -->
+    <footer class="container-fluid bg-secondary py-3 mt-4">
+           <p style="text-align: center; color: white;"> &copy; 2024 Bana Best Hotel</p>
+    
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

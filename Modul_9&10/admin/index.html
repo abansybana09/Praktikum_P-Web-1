@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .form-input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .login {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .login:hover {
+            background-color: #45a049;
+        }
+        .peringatan {
+            color: red;
+            margin-top: 20px;
+        }
+        .container {
+            max-width: 900px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;    
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Login</h3>
+        <input type="text" id="username" class="form-input" placeholder="Username">
+        <input type="password" id="password" class="form-input" placeholder="Password">
+        <button class="login" onclick="validasi()">Login</button>
+        <a id="linksukses" href="well.html"></a>
+        <a id="linkgagal" href="index.html"></a>
+        <div id="peringatan" class="peringatan"></div>
+    </div>
+    <script>
+        function validasi() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            if (username === "") {
+                alert("Username Harus Diisi!");
+            }
+            if (password === "") {
+                alert("Password Harus Diisi!");
+            }
+            if (username === "admin" && password === "123") {
+                alert("Login Sukses!");
+                document.getElementById("linksukses").click();
+            } else {
+                alert("Username atau Password salah!");
+                document.getElementById("linkgagal").click();
+            }
+        }
+    </script>
+</body>
+</html>
